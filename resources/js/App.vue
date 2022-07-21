@@ -1,53 +1,31 @@
 <template>
-<div class="container">
 
-    <h1>I Miei Post</h1>
+    <div>
+    <h1>ciao</h1>
+    </div>
 
 
-<ul>
-    <li
-    v-for="post in posts"
-    :key="post.id"
-    >
-    <h3>{{ post.title }}</h3>
-    <p>{{ post.content }}</p>
-
-    </li>
-</ul>
-</div>
 </template>
 
 <script>
+// import HeaderComp from './components/partials/HeaderComp';
+// import FooterComp from './components/partials/FooterComp';
 export default {
     name: 'App',
-    data() {
-        return {
-            apiUrl: '/api/posts',
-            posts: null
+    components:{
+        // HeaderComponent,
+        // FooterComp
+    },
+    data(){
+        return{
         }
     },
-
     methods:{
-        getApi(){
-        axios.get(this.apiUrl)
-        .then(res =>{
-            this.posts = res.data
-        })
-            // console.log('api');
+    },
+    mounted(){
     }
-
-    },
-
-
-    mounted() {
-        this.getApi();
-        // console.log(axios);
-
-    },
 }
-
 </script>
 
 <style>
-
 </style>
